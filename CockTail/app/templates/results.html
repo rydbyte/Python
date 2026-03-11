@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block content %}
+    {% if data %}
+        {% for cocktail in data %}
+            <div class="cocktail">
+                <h1>{{ cocktail['strDrink'] }}</h1>
+                <h4>{{ cocktail['strGlass'] }}</h4>
+                <img src="{{ cocktail['strDrinkThumb'] }}" alt="{{ cocktail['strDrink'] }}">
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No cocktails found.</p>
+    {% endif %}
+{% endblock %}

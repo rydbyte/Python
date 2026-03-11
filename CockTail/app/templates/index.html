@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>CockTail</title>
+<link rel="stylesheet" href="/app/static/main.css">
+
+</head>
+
+<body>
+
+<form class="CockTailForm" method="get" action="/results">
+    <input type="search" id="fsearch" name="query" placeholder="Search for a CockTail...">
+    <input type="submit" id="fsubmit" value="submit">
+</form>
+
+{% block content %}{% endblock %}
+
+</body>
+
+</html>
