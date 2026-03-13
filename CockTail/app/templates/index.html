@@ -5,7 +5,7 @@
 <head>
 
 <title>CockTail</title>
-<link rel="stylesheet" href="/app/static/main.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 
 </head>
 
@@ -13,7 +13,7 @@
 
 <form class="CockTailForm" method="get" action="/results">
     <input type="search" id="fsearch" name="query" placeholder="Search for a CockTail...">
-    <input type="submit" id="fsubmit" value="submit">
+    <input type="submit" id="fsubmit" value="Search">
 </form>
 
 {% block content %}{% endblock %}

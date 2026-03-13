@@ -2,13 +2,17 @@
 
 {% block content %}
     {% if data %}
+        <dl>
         {% for cocktail in data %}
+        <dt>
             <div class="cocktail">
                 <h1>{{ cocktail['strDrink'] }}</h1>
                 <h4>{{ cocktail['strGlass'] }}</h4>
                 <img src="{{ cocktail['strDrinkThumb'] }}" alt="{{ cocktail['strDrink'] }}">
             </div>
+        </dt>
         {% endfor %}
+        </dl>
     {% else %}
         <p>No cocktails found.</p>
     {% endif %}

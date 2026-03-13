@@ -1,3 +1,86 @@
-#cocktail{
-    background-color: red;
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page */
+body {
+    background: #faf7f2;
+    padding: 40px;
+    color: #333;
+}
+
+/* Search Form */
+.CockTailForm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#fsearch {
+    width: 350px;
+    padding: 12px 15px;
+    border: 2px solid #d4a373;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    font-size: 16px;
+}
+
+#fsearch:focus {
+    border-color: #b07d4f;
+}
+
+#fsubmit {
+    padding: 12px 20px;
+    background: #d4a373;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+
+#fsubmit:hover {
+    background: #b07d4f;
+}
+
+/* Cocktail List */
+dl {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.cocktail {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform .2s ease;
+}
+
+.cocktail:hover {
+    transform: translateY(-5px);
+}
+
+.cocktail img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.cocktail h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #b07d4f;
+}
+
+.cocktail h4 {
+    font-size: 16px;
+    color: #555;
 }
