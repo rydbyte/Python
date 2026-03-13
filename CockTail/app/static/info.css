@@ -1,0 +1,108 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page */
+body {
+    background: #faf7f2;
+    padding: 40px;
+    color: #333;
+}
+
+/* Back Button */
+#back {
+    background: #d4a373;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: background .2s ease;
+}
+
+#back:hover {
+    background: #b07d4f;
+}
+
+/* Drink Info Container */
+.info {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Drink Image */
+.info img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* Drink Name */
+.info h1 {
+    font-size: 32px;
+    color: #b07d4f;
+    margin-bottom: 10px;
+}
+
+/* Glass Type */
+.info h3 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Instructions */
+.info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+/* Ingredients List */
+.info ol {
+    list-style: decimal inside;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.info ol li {
+    padding: 6px 0;
+    font-size: 16px;
+    color: #333;
+}
+.glass-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* space between glass type and alcoholic info */
+}
+
+.glass-info h3, 
+.glass-info h4 {
+    margin: 0;
+    font-weight: normal;
+}
+
+.glass-info h3 {
+    font-size: 20px;
+    color: #555;
+}
+
+.glass-info h4 {
+    font-size: 18px;
+    color: #777;
+}

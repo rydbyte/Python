@@ -1,17 +1,29 @@
 {% extends "index.html" %}
 
 {% block content %}
-    {% if data %}
+    {% if data and not data == 'no data found' %}
         <dl>
-        {% for cocktail in data %}
-        <dt>
-            <div class="cocktail">
-                <h1>{{ cocktail['strDrink'] }}</h1>
-                <h4>{{ cocktail['strGlass'] }}</h4>
-                <img src="{{ cocktail['strDrinkThumb'] }}" alt="{{ cocktail['strDrink'] }}">
-            </div>
-        </dt>
-        {% endfor %}
+        {% if alcoholic %}
+            {% for cocktail in data if cocktail['strAlcoholic'] != 'Alcoholic' %}
+                <dt>
+                    <div class="cocktail" id="{{cocktail['strDrink']}}">
+                        <h1>{{ cocktail['strDrink'] }}</h1>
+                        <h4>{{ cocktail['strGlass'] }}</h4>
+                        <img src="{{ cocktail['strDrinkThumb'] }}" alt="{{ cocktail['strDrink'] }}">
+                    </div>
+                </dt>
+            {% endfor %}
+        {% else %}
+            {% for cocktail in data %}
+            <dt>
+                <div class="cocktail" id="{{cocktail['strDrink']}}">
+                    <h1>{{ cocktail['strDrink'] }}</h1>
+                    <h4>{{ cocktail['strGlass'] }}</h4>
+                    <img src="{{ cocktail['strDrinkThumb'] }}" alt="{{ cocktail['strDrink'] }}">
+                </div>
+            </dt>
+            {% endfor %}
+        {% endif %}
         </dl>
     {% else %}
         <p>No cocktails found.</p>

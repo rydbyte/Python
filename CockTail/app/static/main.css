@@ -68,6 +68,22 @@ dl {
     transform: translateY(-5px);
 }
 
+.CockTailForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* spacing between search group and checkbox */
+}
+
+.search-group {
+    display: flex; /* keeps search + button attached */
+}
+
+.CockTailForm label {
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .cocktail img {
     width: 100%;
     border-radius: 10px;

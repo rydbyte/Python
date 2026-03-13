@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>CockTail</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='info.css') }}">
+
+</head>
+
+<body>
+
+<script src="{{ url_for('static', filename='main.js')}}"></script>
+
+<button id="back">Back</button>
+
+<div class="info">
+    <img src="{{data['strDrinkThumb']}}" alt="{{data['strDrink']}}">
+    <h1>{{data['strDrink']}}</h1>
+    <div class="glass-info">
+        <h3>{{data['strGlass']}}</h3>
+        <h4>({{data['strAlcoholic']}})</h4>
+    </div>
+    <br>
+    <p>{{data['strInstructions']}}</p>
+    <ol>
+        {% for n in range(1, 15, 1) %}
+           {% if data['strIngredient'~n] != none %}
+                <li>{{data['strIngredient'~n]}}</li>
+           {% endif %}
+        {% endfor %}
+    </ol>
+</div>
+
+</body>
+
+</html>
