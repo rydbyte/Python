@@ -11,11 +11,10 @@ def index():
 @app.route("/results")
 def results():
     query = request.args.get("query") 
-    alcoholic = request.args.get('alcoholic') 
+    nonalcoholic = request.args.get('nonalcoholic') 
     data = requests.get(f"https://www.thecocktaildb.com/api/json/v1/1/search.php?s={query}")  
     data = data.json()
-
-    return render_template('results.html', data=data['drinks'], alcoholic=alcoholic)
+    return render_template('results.html', data=data['drinks'], nonalcoholic=nonalcoholic)
 
 @app.route("/info")
 def info():

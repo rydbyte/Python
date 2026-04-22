@@ -3,7 +3,7 @@
 {% block content %}
     {% if data and not data == 'no data found' %}
         <dl>
-        {% if alcoholic %}
+        {% if nonalcoholic %}
             {% for cocktail in data if cocktail['strAlcoholic'] != 'Alcoholic' %}
                 <dt>
                     <div class="cocktail" id="{{cocktail['strDrink']}}">

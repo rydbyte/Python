@@ -4,7 +4,7 @@ window.addEventListener("load", function () {
     element.forEach(function(el){
         el.addEventListener('click', function () {
             event.preventDefault();
-
+            
             let id = this.id;
             localStorage.setItem('previousurl', window.location.href)
 
